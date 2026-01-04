@@ -52,13 +52,15 @@ h2 {
   box-shadow: 0 0 10px #9333ea;
 }
 
+/* Cards row (responsive) */
 .cards {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;            /* important */
 }
 
 .card {
-  flex: 1;
+  flex: 1 1 260px;            /* important: can shrink + wrap */
   padding: 40px;
   background: rgba(255,255,255,0.05);
   border-radius: 20px;
@@ -75,33 +77,35 @@ h2 {
   color: #a855f7;
   text-decoration: none;
   font-size: 1.2rem;
-
 }
 
 /* Work section spacing */
 .work { padding: 60px 20px; }
 
-/* Instagram embeds grid (side-by-side) */
+/* Instagram embeds: true responsive grid */
 .ig-embeds{
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 18px;
   margin-top: 20px;
   align-items: start;
 }
 
-/* Instagram embed default sizing fix */
+/* Prevent grid blowout */
+.ig-embeds > *{
+  min-width: 0;
+}
+
+/* Override Instagram embed default sizing */
 .ig-embeds .instagram-media{
   width: 100% !important;
-  min-width: 0 !important;     /* Instagram code has min-width:326px, grid break karta hai */
+  min-width: 0 !important;     
   max-width: 100% !important;
   margin: 0 !important;
 }
 
-/* Responsive */
-@media (max-width: 900px){
-  .ig-embeds{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
+/* Extra small screens polish */
 @media (max-width: 560px){
-  .ig-embeds{ grid-template-columns: 1fr; }
+  section { padding: 60px 6%; }
+  .hero-text h1 { font-size: 2.6rem; }
 }
