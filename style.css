@@ -75,4 +75,33 @@ h2 {
   color: #a855f7;
   text-decoration: none;
   font-size: 1.2rem;
+
+}
+
+/* Work section spacing */
+.work { padding: 60px 20px; }
+
+/* Instagram embeds grid (side-by-side) */
+.ig-embeds{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+  align-items: start;
+}
+
+/* Instagram embed default sizing fix */
+.ig-embeds .instagram-media{
+  width: 100% !important;
+  min-width: 0 !important;     /* Instagram code has min-width:326px, grid break karta hai */
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .ig-embeds{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px){
+  .ig-embeds{ grid-template-columns: 1fr; }
 }
