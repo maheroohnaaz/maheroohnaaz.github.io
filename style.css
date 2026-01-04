@@ -1,111 +1,108 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
 }
 
-body {
-  background: #0b0b14;
-  color: #fff;
+body{
+  background:#0b0b14;
+  color:#fff;
 }
 
-.hero {
-  height: 100vh;
-  background: radial-gradient(circle at top, #3b0764, #020617);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.hero{
+  height:100vh;
+  background:radial-gradient(circle at top, #3b0764, #020617);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 6%;
 }
 
-.hero-text h1 {
-  font-size: 4rem;
-  color: #a855f7;
-  text-shadow: 0 0 20px #9333ea;
+.hero-text h1{
+  font-size:4rem;
+  color:#a855f7;
+  text-shadow:0 0 20px #9333ea;
 }
 
-.hero-text p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+.hero-text p{
+  font-size:1.2rem;
+  margin-top:10px;
 }
 
-section {
-  padding: 80px 10%;
+section{
+  padding:80px 10%;
 }
 
-h2 {
-  color: #c084fc;
-  margin-bottom: 20px;
+h2{
+  color:#c084fc;
+  margin-bottom:20px;
 }
 
-.skill-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+.skill-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
 }
 
-.skill-grid span {
-  padding: 10px 20px;
-  border: 1px solid #9333ea;
-  border-radius: 20px;
-  box-shadow: 0 0 10px #9333ea;
+.skill-grid span{
+  padding:10px 20px;
+  border:1px solid #9333ea;
+  border-radius:20px;
+  box-shadow:0 0 10px #9333ea;
 }
 
-/* Cards row (responsive) */
-.cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;            /* important */
+/* Cards */
+.cards{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
-.card {
-  flex: 1 1 260px;            /* important: can shrink + wrap */
-  padding: 40px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s, box-shadow 0.3s;
+.card{
+  flex:1 1 260px;
+  padding:40px;
+  background:rgba(255,255,255,0.05);
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  transition:transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px #9333ea;
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px #9333ea;
 }
 
-.contact a {
-  color: #a855f7;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-/* Work section spacing */
-.work { padding: 60px 20px; }
-
-/* Instagram embeds: true responsive grid */
+/* Instagram grid */
 .ig-embeds{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 18px;
-  margin-top: 20px;
-  align-items: start;
+  margin-top:24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:18px;
+  align-items:start;
 }
 
-/* Prevent grid blowout */
+/* Important: prevent grid blowout */
 .ig-embeds > *{
-  min-width: 0;
+  min-width:0;
 }
 
-/* Override Instagram embed default sizing */
-.ig-embeds .instagram-media{
-  width: 100% !important;
-  min-width: 0 !important;     
-  max-width: 100% !important;
-  margin: 0 !important;
+/* Force embed to fill grid cell */
+.ig-embeds blockquote.instagram-media{
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  margin:0 !important;
 }
 
-/* Extra small screens polish */
-@media (max-width: 560px){
-  section { padding: 60px 6%; }
-  .hero-text h1 { font-size: 2.6rem; }
+.contact a{
+  color:#a855f7;
+  text-decoration:none;
+  font-size:1.2rem;
+}
+
+@media (max-width:560px){
+  section{ padding:60px 6%; }
+  .hero-text h1{ font-size:2.6rem; }
 }
