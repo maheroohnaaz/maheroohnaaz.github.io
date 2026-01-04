@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #0b0b14;
+  color: #fff;
+}
+
+.hero {
+  height: 100vh;
+  background: radial-gradient(circle at top, #3b0764, #020617);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  color: #a855f7;
+  text-shadow: 0 0 20px #9333ea;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+h2 {
+  color: #c084fc;
+  margin-bottom: 20px;
+}
+
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill-grid span {
+  padding: 10px 20px;
+  border: 1px solid #9333ea;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #9333ea;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 40px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px #9333ea;
+}
+
+.contact a {
+  color: #a855f7;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
