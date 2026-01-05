@@ -10,6 +10,7 @@ body{
   color:#fff;
 }
 
+/* HERO */
 .hero{
   height:100vh;
   background:radial-gradient(circle at top, #3b0764, #020617);
@@ -29,8 +30,19 @@ body{
 .hero-text p{
   font-size:1.2rem;
   margin-top:10px;
+  color:#e5e7eb;
 }
 
+.hero-line{
+  width:120px;
+  height:4px;
+  margin:20px auto 0;
+  background:linear-gradient(90deg,#9333ea,#22d3ee);
+  box-shadow:0 0 20px #9333ea;
+  border-radius:10px;
+}
+
+/* SECTIONS */
 section{
   padding:80px 10%;
 }
@@ -40,6 +52,14 @@ h2{
   margin-bottom:20px;
 }
 
+.subhead{
+  margin-top:40px;
+  margin-bottom:16px;
+  color:#a855f7;
+  letter-spacing:1px;
+}
+
+/* SKILLS */
 .skill-grid{
   display:flex;
   flex-wrap:wrap;
@@ -51,9 +71,10 @@ h2{
   border:1px solid #9333ea;
   border-radius:20px;
   box-shadow:0 0 10px #9333ea;
+  font-size:0.9rem;
 }
 
-/* Cards */
+/* CARDS */
 .cards{
   display:flex;
   gap:20px;
@@ -66,7 +87,9 @@ h2{
   background:rgba(255,255,255,0.05);
   border-radius:20px;
   backdrop-filter:blur(10px);
-  transition:transform 0.3s, box-shadow 0.3s;
+  transition:transform 0.6s ease, box-shadow 0.3s, opacity 0.6s ease;
+  opacity:0;
+  transform:translateY(40px);
 }
 
 .card:hover{
@@ -74,34 +97,56 @@ h2{
   box-shadow:0 0 25px #9333ea;
 }
 
-/* Instagram grid */
+.card h3{
+  color:#e9d5ff;
+  margin-bottom:8px;
+}
+
+.card p{
+  font-size:0.95rem;
+  color:#d1d5db;
+}
+
+/* INSTAGRAM */
 .ig-embeds{
   margin-top:24px;
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
   gap:18px;
-  align-items:start;
 }
 
-/* Important: prevent grid blowout */
 .ig-embeds > *{
   min-width:0;
 }
 
-/* Force embed to fill grid cell */
 .ig-embeds blockquote.instagram-media{
   width:100% !important;
   max-width:100% !important;
-  min-width:0 !important;
   margin:0 !important;
 }
 
-.contact a{
-  color:#a855f7;
-  text-decoration:none;
-  font-size:1.2rem;
+/* CONTACT */
+.contact{
+  text-align:center;
 }
 
+.contact p{
+  margin-bottom:20px;
+  color:#d1d5db;
+}
+
+.cta{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:30px;
+  background:linear-gradient(90deg,#9333ea,#22d3ee);
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 0 25px #9333ea;
+}
+
+/* MOBILE */
 @media (max-width:560px){
   section{ padding:60px 6%; }
   .hero-text h1{ font-size:2.6rem; }
